@@ -12,12 +12,7 @@ class Program
 
 
         signature = new EDSignature();
-        while (true)
-        {
-            Console.Write("\n> ");
-            // Генерация параметров сигнатуры
-            var cmd = Console.ReadLine();
-            Commands.Parse(cmd);
-        }
+
+        Interface.Run();
     }
 }
