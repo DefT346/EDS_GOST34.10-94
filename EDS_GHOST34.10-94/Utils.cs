@@ -51,5 +51,16 @@ namespace EDS_GHOST34._10_94
         {
             return string.Join(" ", bytes.Select(x => x.ToString("X2")));
         }
+
+        public byte[] Parse16(string row)
+        {
+            List<byte> buffer = new List<byte>();
+            var arr = row.Split(' ');
+            for(int i = 0; i < arr.Length; i++)
+            {
+                buffer.Add((byte)Convert.ToInt16(arr[i], 16));
+            }
+            return buffer.ToArray();
+        }
     }
 }
